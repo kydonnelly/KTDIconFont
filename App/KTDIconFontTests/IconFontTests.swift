@@ -8,24 +8,8 @@
 import XCTest
 @testable import KTDIconFont
 
-enum TestIcon: unichar, IconFont {
-    case notFound
-    case rocket
-    case fire
-    case lab
-    case count
-    
-    static var fontFileName: String {
-        return "icomoon"
-    }
-    
-    static var initialCodePoint: unichar {
-        return 0xe9a5
-    }
-}
-
 class IconFontTests : XCTestCase {
-
+    
     override class func setUp() {
         super.setUp()
         
@@ -51,6 +35,18 @@ class IconFontTests : XCTestCase {
         
         // Verify
         XCTAssertEqual(font.fontName, fontName)
+    }
+    
+    func test_IconFont_good_IconCodeLength() {
+        // Setup
+        let icon = TestIcon.rocket
+        let expectedLength = 1
+        
+        // Test
+        let result = TestIcon.iconCode(for: icon)
+        
+        // Verify
+        XCTAssertEqual(result?.count, expectedLength)
     }
 
     func test_IconStore_good_findsIcon() {

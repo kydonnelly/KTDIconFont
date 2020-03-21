@@ -14,7 +14,13 @@ public protocol IconFont : CaseIterable, RawRepresentable {
     static var fontFileName: String { get }
     static var initialCodePoint: Self.RawValue { get }
     
-    static var store: IconStore<Self> { get }
+    // Defined internally when .RawValue == unichar
+    associatedtype BackingObject: AnyObject
+    var backingObject: BackingObject { get }
+    static func initWithBackingObject(_ backingObject: BackingObject) -> Self
+    
+    // Defined internally when .RawValue == unichar
+    static func iconCode(for icon: Self) -> String?
     
 }
 
