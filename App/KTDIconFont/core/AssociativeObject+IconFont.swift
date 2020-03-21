@@ -29,7 +29,7 @@ extension AssociativeObject {
     
 }
 
-internal extension IconFont where Self.RawValue == unichar {
+public extension IconFont where Self.RawValue == unichar {
     
     var backingObject: NSNumber {
         NSNumber(value: self.rawValue)
