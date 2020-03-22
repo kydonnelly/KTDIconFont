@@ -10,7 +10,7 @@
 
 import Foundation
 
-protocol AssociativeObject {
+public protocol AssociativeObject {
     
     func getValue<T: AnyObject>(key: UnsafePointer<UInt8>) -> T?
     func getValue<T: AnyObject>(key: UnsafePointer<UInt8>, defaultValue: () -> T) -> T
@@ -19,7 +19,7 @@ protocol AssociativeObject {
     
 }
 
-extension AssociativeObject {
+public extension AssociativeObject {
     
     func getValue<T: AnyObject>(key: UnsafePointer<UInt8>) -> T? {
         return objc_getAssociatedObject(self, key) as? T

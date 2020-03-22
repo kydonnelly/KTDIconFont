@@ -1,35 +1,34 @@
 //
-//  TestIcon.swift
-//  KTDIconFont
+//  icomoon.swift
 //
-//  Created by Kyle Donnelly on 3/21/20.
+//  !!! AUTO-GENERATED FILE !!!!
+//  !!! DO NOT EDIT DIRECTLY !!!
+//  !!! generate_icon_font.py !!
 //
 
-@testable import KTDIconFont
+import KTDIconFont
 
-public enum TestIcon: unichar, IconFont {
-    case notFound
-    case rocket
-    case fire
-    case lab
+public enum icomoon: unichar, IconFont {
+    case notFound = 0x0
+    
+    case rocket = 0xe9a5
+    case fire = 0xe9a9
+    case lab = 0xe9aa
+
     
     public static var fontFileName: String {
         return "icomoon"
     }
-    
-    public static var initialCodePoint: unichar {
-        return 0xe9a5
-    }
 }
 
-extension UIButton : IconAppearance {
-    public typealias AssociatedIcon = TestIcon
+extension UIImageView: IconAppearance {
+    public typealias AssociatedIcon = icomoon
 }
 
-extension UIImageView : IconAppearance {
-    public typealias AssociatedIcon = TestIcon
+extension UIButton: IconAppearance {
+    public typealias AssociatedIcon = icomoon
 }
 
-extension UIBarItem : IconAppearance {
-    public typealias AssociatedIcon = TestIcon
+extension UIBarItem: IconAppearance {
+    public typealias AssociatedIcon = icomoon
 }

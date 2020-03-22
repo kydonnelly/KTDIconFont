@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension IconAppearance where Self: UIButton {
+public extension IconAppearance where Self: UIButton {
     
     func refreshIconAppearance() {
         self.useIcon(self.icon, iconColor: self.iconColor, backgroundColor: self.iconBackgroundColor, state: .normal)

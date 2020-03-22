@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension IconAppearance where Self: UIBarItem {
+public extension IconAppearance where Self: UIBarItem {
     
     var preferredIconSize: CGSize {
         return CGSize(width: 24, height: 24)

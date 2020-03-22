@@ -19,13 +19,13 @@ ${enum_cases}
 }
 
 extension UIImageView: IconAppearance {
-    typealias AssociatedIcon = ${font_name}
+    public typealias AssociatedIcon = ${font_name}
 }
 
 extension UIButton: IconAppearance {
-    typealias AssociatedIcon = ${font_name}
+    public typealias AssociatedIcon = ${font_name}
 }
 
 extension UIBarItem: IconAppearance {
-    typealias AssociatedIcon = ${font_name}
+    public typealias AssociatedIcon = ${font_name}
 }

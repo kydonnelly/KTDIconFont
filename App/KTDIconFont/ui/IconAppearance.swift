@@ -8,7 +8,7 @@
 import Foundation
 
 // Protocol to easily display icons
-internal protocol IconAppearance : class, AssociativeObject {
+public protocol IconAppearance : class, AssociativeObject {
     
     associatedtype AssociatedIcon: IconFont
     
@@ -18,7 +18,7 @@ internal protocol IconAppearance : class, AssociativeObject {
 }
 
 // By default, icons will aspect-fit the owner's coordinate space
-extension IconAppearance where Self: UICoordinateSpace {
+public extension IconAppearance where Self: UICoordinateSpace {
     
     var preferredIconSize: CGSize {
         return self.bounds.size
@@ -70,7 +70,7 @@ extension IconAppearance {
         refreshIconAppearance()
     }
     
-    internal var iconSize: CGSize {
+    public var iconSize: CGSize {
         get {
             if let value: NSValue = getValue(key: &AssociatedObjectKeys.IconSizeKey) {
                 return value.cgSizeValue
@@ -83,7 +83,7 @@ extension IconAppearance {
         }
     }
     
-    internal var iconInset: CGFloat {
+    public var iconInset: CGFloat {
         get {
             if let value: NSNumber = getValue(key: &AssociatedObjectKeys.IconInsetKey) {
                 return CGFloat(value.doubleValue)
@@ -96,72 +96,72 @@ extension IconAppearance {
         }
     }
     
-    internal var icon: AssociatedIcon? {
+    public var icon: AssociatedIcon? {
         get { getIcon(key: &AssociatedObjectKeys.IconKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.IconKey) }
     }
     
-    internal var highlightedIcon: AssociatedIcon? {
+    public var highlightedIcon: AssociatedIcon? {
         get { getIcon(key: &AssociatedObjectKeys.HighlighedIconKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.HighlighedIconKey) }
     }
     
-    internal var selectedIcon: AssociatedIcon? {
+    public var selectedIcon: AssociatedIcon? {
         get { getIcon(key: &AssociatedObjectKeys.SelectedIconKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.SelectedIconKey) }
     }
     
-    internal var disabledIcon: AssociatedIcon? {
+    public var disabledIcon: AssociatedIcon? {
         get { getIcon(key: &AssociatedObjectKeys.DisabledIconKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.DisabledIconKey) }
     }
     
-    internal var iconColor: UIColor? {
+    public var iconColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.IconColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.IconColorKey) }
     }
     
-    internal var highlightedIconColor: UIColor? {
+    public var highlightedIconColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.HighlightedIconColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.HighlightedIconColorKey) }
     }
     
-    internal var selectedIconColor: UIColor? {
+    public var selectedIconColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.SelectedIconColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.SelectedIconColorKey) }
     }
     
-    internal var disabledIconColor: UIColor? {
+    public var disabledIconColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.DisabledIconColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.DisabledIconColorKey) }
     }
     
-    internal var iconBackgroundColor: UIColor {
+    public var iconBackgroundColor: UIColor {
         get { getValue(key: &AssociatedObjectKeys.IconBackgroundColorKey) { .clear } }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.IconBackgroundColorKey) }
     }
     
-    internal var highlightedIconBackgroundColor: UIColor? {
+    public var highlightedIconBackgroundColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.HighlightedIconBackgroundColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.HighlightedIconBackgroundColorKey) }
     }
     
-    internal var selectedIconBackgroundColor: UIColor? {
+    public var selectedIconBackgroundColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.SelectedIconBackgroundColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.SelectedIconBackgroundColorKey) }
     }
     
-    internal var disabledIconBackgroundColor: UIColor? {
+    public var disabledIconBackgroundColor: UIColor? {
         get { getValue(key: &AssociatedObjectKeys.DisabledIconBackgroundColorKey) }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.DisabledIconBackgroundColorKey) }
     }
     
-    internal var iconBorderColor: UIColor {
+    public var iconBorderColor: UIColor {
         get { getValue(key: &AssociatedObjectKeys.IconBorderColorKey) { .clear } }
         set { setAndRefresh(newValue, key: &AssociatedObjectKeys.IconBorderColorKey) }
     }
     
-    internal var iconBorderWidth: CGFloat {
+    public var iconBorderWidth: CGFloat {
         get {
             if let value: NSNumber = getValue(key: &AssociatedObjectKeys.IconBorderWidthKey) {
                 return CGFloat(value.doubleValue)
@@ -178,19 +178,19 @@ extension IconAppearance {
 
 extension IconAppearance {
     
-    internal func setIcon(name: String) {
+    public func setIcon(name: String) {
         self.icon = AssociatedIcon.store.icon(name: name)
     }
     
-    internal func setHighlightedIcon(name: String) {
+    public func setHighlightedIcon(name: String) {
         self.highlightedIcon = AssociatedIcon.store.icon(name: name)
     }
     
-    internal func setSelectedIcon(name: String) {
+    public func setSelectedIcon(name: String) {
         self.selectedIcon = AssociatedIcon.store.icon(name: name)
     }
     
-    internal func setDisabledIcon(name: String) {
+    public func setDisabledIcon(name: String) {
         self.disabledIcon = AssociatedIcon.store.icon(name: name)
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension IconAppearance where Self: UIImageView {
+public extension IconAppearance where Self: UIImageView {
     
     func refreshIconAppearance() {
         self.image = self.image(icon: self.icon, color: self.iconColor, backgroundColor: self.iconBackgroundColor)
