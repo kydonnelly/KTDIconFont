@@ -1,0 +1,35 @@
+//
+//  ${font_name}.swift
+//
+//  !!! AUTO-GENERATED FILE !!!!
+//  !!! DO NOT EDIT DIRECTLY !!!
+//  !!! generate_icon_font.py !!
+//
+
+import KTDIconFont
+
+public enum ${font_name}: unichar, IconFont {
+    case notFound
+    
+${enum_cases}
+    
+    public static var fontFileName: String {
+        return "${font_name}"
+    }
+    
+    public static var initialCodePoint: unichar {
+        return ${start_hex}
+    }
+}
+
+extension UIImageView: IconAppearance {
+    typealias AssociatedIcon = ${font_name}
+}
+
+extension UIButton: IconAppearance {
+    typealias AssociatedIcon = ${font_name}
+}
+
+extension UIBarItem: IconAppearance {
+    typealias AssociatedIcon = ${font_name}
+}
