@@ -11,6 +11,11 @@ import Foundation
 extension UIImage {
     
     public static func image<T: IconFont>(icon: T, color: UIColor, backgroundColor: UIColor, size: CGSize, inset: CGFloat, cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) -> UIImage? {
+        // UIGraphics will not return an image for zero size
+        guard size != .zero else {
+            return nil
+        }
+        
         // Setup icon text
         guard let textContent = T.iconCode(for: icon) else {
             return nil

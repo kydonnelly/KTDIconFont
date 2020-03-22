@@ -287,6 +287,24 @@ class IconAppearanceTests : XCTestCase {
         XCTAssertNil(image)
     }
     
+    func test_UIImage_bad_zeroSizeIcon() {
+        // Setup
+        let iconSize = CGSize.zero
+        let icon = TestIcon.count
+        let iconColor = UIColor.red
+        let iconBackgroundColor = UIColor.clear
+        let iconInset: CGFloat = 2.0
+        let cornerRadius: CGFloat = 4.0
+        let borderWidth: CGFloat = 1.0
+        let borderColor = UIColor.gray
+        
+        // Test
+        let image = UIImage.image(icon: icon, color: iconColor, backgroundColor: iconBackgroundColor, size: iconSize, inset: iconInset, cornerRadius: cornerRadius, borderWidth: borderWidth, borderColor: borderColor)
+        
+        // Verify
+        XCTAssertNil(image)
+    }
+    
     func test_UIImage_good_cutoutImageForIcon() {
         // Setup
         let iconSize = CGSize(width: 4, height: 6)
