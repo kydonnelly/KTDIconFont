@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="KO3-1u-3vU">
             <objects>
-                <viewController id="AU3-5Y-0Au" customClass="ViewController" customModule="IconFontViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AU3-5Y-0Au" customClass="ViewController" customModule="IconViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BOb-V3-IlV"/>
                         <viewControllerLayoutGuide type="bottom" id="4E4-D8-7pu"/>
@@ -36,11 +36,6 @@
                                                         <constraint firstAttribute="height" constant="48" id="Ffo-50-d2k"/>
                                                         <constraint firstAttribute="width" constant="48" id="O5T-hn-sc7"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                            <color key="value" red="0.1215686275" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-nf-XCF">
                                                     <rect key="frame" x="68" y="22.5" width="334" height="19.5"/>

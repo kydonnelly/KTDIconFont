@@ -159,6 +159,7 @@
 				2710DD74242458C400365E87 /* Sources */,
 				2710DD75242458C400365E87 /* Frameworks */,
 				2710DD76242458C400365E87 /* Resources */,
+				663D6A8B76E101D1CB3AAA97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +229,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		663D6A8B76E101D1CB3AAA97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IconViewer/Pods-IconViewer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IconViewer/Pods-IconViewer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IconViewer/Pods-IconViewer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FEBE8F68FF60734E728CA9B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

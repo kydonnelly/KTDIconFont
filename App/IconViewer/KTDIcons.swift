@@ -1,32 +1,41 @@
 //
 //  KTDIcons.swift
-//  IconViewer
 //
-//  Created by Kyle Donnelly on 3/21/20.
-//  Copyright © 2020 Kyle Donnelly. All rights reserved.
+//  !!! AUTO-GENERATED FILE !!!!
+//  !!! DO NOT EDIT DIRECTLY !!!
+//  !!! generate_icon_font.py !!
 //
 
 import KTDIconFont
 
 public enum KTDIcons: unichar, IconFont {
-    case notFound
+    case notFound = 0x0
     
-    case pencil
-    case pacman
-    case stack
-    case pushpin
-    case bubbles
-    case rocket
-    case fire
-    case lab
-    case hipster
-    case facebook
+    case pencil = 0xe905
+    case pacman = 0xe916
+    case stack = 0xe92e
+    case pushpin = 0xe946
+    case bubbles2 = 0xe96d
+    case rocket = 0xe9a5
+    case fire = 0xe9a9
+    case lab = 0xe9aa
+    case hipster2 = 0xe9fa
+    case facebook2 = 0xea91
+
     
     public static var fontFileName: String {
         return "KTDIcons"
     }
-    
-    public static var initialCodePoint: unichar {
-        return 0xe905
-    }
+}
+
+extension UIImageView: IconAppearance {
+    public typealias AssociatedIcon = KTDIcons
+}
+
+extension UIButton: IconAppearance {
+    public typealias AssociatedIcon = KTDIcons
+}
+
+extension UIBarItem: IconAppearance {
+    public typealias AssociatedIcon = KTDIcons
 }

@@ -37,7 +37,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: IconCell = self.tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath) as! IconCell
         
-        cell.setup(icon: KTDIcons(rawValue: UInt16(indexPath.row + 1))!)
+        cell.setup(icon: KTDIcons.allCases[indexPath.row + 1])
         
         return cell
     }

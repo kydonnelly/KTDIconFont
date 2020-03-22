@@ -14,6 +14,12 @@ class IconCell: UITableViewCell {
     @IBOutlet private var iconLabel: UILabel!
     @IBOutlet private var iconImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.iconImageView.iconColor = .darkGray
+    }
+    
     public func setup(icon: KTDIcons) {
         // how to get enum case name?? look up in xib map
         self.iconLabel.text = "\(icon)"
