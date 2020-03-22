@@ -12,7 +12,6 @@ public enum TestIcon: unichar, IconFont {
     case rocket
     case fire
     case lab
-    case count
     
     public static var fontFileName: String {
         return "icomoon"

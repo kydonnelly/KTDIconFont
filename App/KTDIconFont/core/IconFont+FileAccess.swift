@@ -23,7 +23,7 @@ extension IconFont {
 extension IconFont where Self.RawValue == unichar {
     
     private func isValid() -> Bool {
-        return self.rawValue != 0 && self.rawValue != Self.allCases.count - 1
+        return self.rawValue != 0 && self.rawValue < Self.allCases.count
     }
     
     public static func iconCode(for icon: Self) -> String? {

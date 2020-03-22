@@ -76,7 +76,7 @@ class IconFontTests : XCTestCase {
     func test_IconStore_good_loadIconsCount() {
         // Setup
         let iconStore = IconStore<TestIcon>()
-        let numIcons = Int(TestIcon.count.rawValue) + 1
+        let numIcons = TestIcon.allCases.count
         
         // Test
         let icons = iconStore.loadIcons()
