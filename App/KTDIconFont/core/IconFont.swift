@@ -12,7 +12,6 @@ import Foundation
 public protocol IconFont : CaseIterable, RawRepresentable {
     
     static var fontFileName: String { get }
-    static var initialCodePoint: Self.RawValue { get }
     
     // Defined internally when .RawValue == unichar
     associatedtype BackingObject: AnyObject

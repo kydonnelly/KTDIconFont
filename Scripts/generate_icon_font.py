@@ -92,23 +92,25 @@ font_json = font_file_contents(source_path)
 class FontInfo:
     def __init__(self, json):
         self.name = json['metadata']['name']
-        self.start_hex = hex(json['icons'][0]['properties']['code'])
-        self.icons = [j['properties']['name'] for j in json['icons']]
+        self.iconProperties = [j['properties'] for j in json['icons']]
         
     def __str__(self):
-        return "Font name: {0}\nStart unicode: {1}\nIcons: {2}".format(self.name, self.start_hex, ', '.join([i for i in self.icons]))
+        return "Font name: {0}\nIcons: {1}".format(self.name, ', '.join([p['name'] for p in self.iconProperties]))
         
 font_info = FontInfo(font_json)
 
 ##### Generate swift code from template #####
-enum_file = open('FontEnum.template', 'r')
+current_directory = path.dirname(path.realpath(__file__))
+
+enum_file = open(path.join(current_directory, 'FontEnum.template'), 'r')
 enum_template = Template(enum_file.read())
-enum_code = "\n".join([enum_template.substitute(icon_name=i) for i in font_info.icons])
+enum_list = [enum_template.substitute(icon_name=p['name'], hex_code=hex(p['code'])) for p in font_info.iconProperties]
+enum_code = "\n".join(enum_list)
 enum_file.close()
 
-font_file = open('FontFile.template', 'r')
+font_file = open(path.join(current_directory, 'FontFile.template'), 'r')
 font_template = Template(font_file.read())
-font_code = font_template.substitute(font_name=font_info.name, start_hex=font_info.start_hex, enum_cases=enum_code)
+font_code = font_template.substitute(font_name=font_info.name, enum_cases=enum_code)
 font_file.close()
 
 ##### Write swift code to target directory #####

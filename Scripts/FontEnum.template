@@ -1,1 +1,1 @@
-    case ${icon_name}
+    case ${icon_name} = ${hex_code}

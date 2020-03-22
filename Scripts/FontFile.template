@@ -9,16 +9,12 @@
 import KTDIconFont
 
 public enum ${font_name}: unichar, IconFont {
-    case notFound
+    case notFound = 0x0
     
 ${enum_cases}
     
     public static var fontFileName: String {
         return "${font_name}"
-    }
-    
-    public static var initialCodePoint: unichar {
-        return ${start_hex}
     }
 }
 
