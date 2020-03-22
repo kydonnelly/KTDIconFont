@@ -10,11 +10,13 @@
 		07C0C2A7A6E005372E4E06DE /* libPods-IconViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFED387C7987239D94BDC8E /* libPods-IconViewer.a */; };
 		2710DD6E2424570000365E87 /* KTDIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 2710DD6C2424570000365E87 /* KTDIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2710DD7B242458C400365E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD7A242458C400365E87 /* AppDelegate.swift */; };
-		2710DD7D242458C400365E87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD7C242458C400365E87 /* SceneDelegate.swift */; };
 		2710DD7F242458C400365E87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD7E242458C400365E87 /* ViewController.swift */; };
 		2710DD82242458C400365E87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD80242458C400365E87 /* Main.storyboard */; };
 		2710DD84242458C400365E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD83242458C400365E87 /* Assets.xcassets */; };
 		2710DD87242458C400365E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD85242458C400365E87 /* LaunchScreen.storyboard */; };
+		273BDE6824272940004E88C1 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273BDE6724272940004E88C1 /* IconCell.swift */; };
+		273BDE6A24273826004E88C1 /* KTDIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 273BDE6924273826004E88C1 /* KTDIcons.ttf */; };
+		273BDE6C24273865004E88C1 /* KTDIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273BDE6B24273865004E88C1 /* KTDIcons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +25,14 @@
 		2710DD6D2424570000365E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2710DD78242458C400365E87 /* IconViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2710DD7A242458C400365E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2710DD7C242458C400365E87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2710DD7E242458C400365E87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2710DD81242458C400365E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2710DD83242458C400365E87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2710DD86242458C400365E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2710DD88242458C400365E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273BDE6724272940004E88C1 /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
+		273BDE6924273826004E88C1 /* KTDIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KTDIcons.ttf; sourceTree = "<group>"; };
+		273BDE6B24273865004E88C1 /* KTDIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTDIcons.swift; sourceTree = "<group>"; };
 		48DB1DEA538AA7C1EB382730 /* Pods-IconViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconViewer.debug.xcconfig"; path = "Target Support Files/Pods-IconViewer/Pods-IconViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		A797769614F5197574D16F52 /* Pods-IconViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IconViewer.release.xcconfig"; path = "Target Support Files/Pods-IconViewer/Pods-IconViewer.release.xcconfig"; sourceTree = "<group>"; };
 		BDFED387C7987239D94BDC8E /* libPods-IconViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IconViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +89,10 @@
 		2710DD79242458C400365E87 /* IconViewer */ = {
 			isa = PBXGroup;
 			children = (
+				273BDE6924273826004E88C1 /* KTDIcons.ttf */,
 				2710DD7A242458C400365E87 /* AppDelegate.swift */,
-				2710DD7C242458C400365E87 /* SceneDelegate.swift */,
+				273BDE6724272940004E88C1 /* IconCell.swift */,
+				273BDE6B24273865004E88C1 /* KTDIcons.swift */,
 				2710DD7E242458C400365E87 /* ViewController.swift */,
 				2710DD80242458C400365E87 /* Main.storyboard */,
 				2710DD83242458C400365E87 /* Assets.xcassets */,
@@ -102,7 +108,6 @@
 				48DB1DEA538AA7C1EB382730 /* Pods-IconViewer.debug.xcconfig */,
 				A797769614F5197574D16F52 /* Pods-IconViewer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,6 +221,7 @@
 				2710DD87242458C400365E87 /* LaunchScreen.storyboard in Resources */,
 				2710DD84242458C400365E87 /* Assets.xcassets in Resources */,
 				2710DD82242458C400365E87 /* Main.storyboard in Resources */,
+				273BDE6A24273826004E88C1 /* KTDIcons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273BDE6C24273865004E88C1 /* KTDIcons.swift in Sources */,
 				2710DD7F242458C400365E87 /* ViewController.swift in Sources */,
 				2710DD7B242458C400365E87 /* AppDelegate.swift in Sources */,
-				2710DD7D242458C400365E87 /* SceneDelegate.swift in Sources */,
+				273BDE6824272940004E88C1 /* IconCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
