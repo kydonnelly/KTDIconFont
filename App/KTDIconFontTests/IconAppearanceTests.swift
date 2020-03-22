@@ -8,20 +8,12 @@
 import XCTest
 @testable import KTDIconFont
 
-extension UIView : IconAppearance {
-    
-    public typealias AssociatedIcon = TestIcon
-    
-    public func refreshIconAppearance() { }
-    
-}
-
 class IconAppearanceTests : XCTestCase {
 
     func test_IconAppearance_good_preferredIconSize() {
         // Setup
         let size = CGSize(width: 4, height: 8)
-        let testView = UIView(frame: CGRect(origin: .zero, size: size))
+        let testView = UIImageView(frame: CGRect(origin: .zero, size: size))
         
         // Test
         let iconSize = testView.iconSize
@@ -34,7 +26,7 @@ class IconAppearanceTests : XCTestCase {
         // Setup
         let iconSize = CGSize(width: 2, height: 4)
         let viewSize = CGSize(width: 4, height: 8)
-        let testView = UIView(frame: CGRect(origin: .zero, size: viewSize))
+        let testView = UIImageView(frame: CGRect(origin: .zero, size: viewSize))
         XCTAssertEqual(testView.iconSize, viewSize)
         
         // Test
@@ -48,7 +40,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_defaultIconInset() {
         // Setup
         let size = CGSize(width: 4, height: 8)
-        let testView = UIView(frame: CGRect(origin: .zero, size: size))
+        let testView = UIImageView(frame: CGRect(origin: .zero, size: size))
         let expectedDefaultInset = 1.0 / UIScreen.main.scale
         
         // Test
@@ -62,7 +54,7 @@ class IconAppearanceTests : XCTestCase {
         // Setup
         let iconInset: CGFloat = 2.0
         let viewSize = CGSize(width: 4, height: 8)
-        let testView = UIView(frame: CGRect(origin: .zero, size: viewSize))
+        let testView = UIImageView(frame: CGRect(origin: .zero, size: viewSize))
         
         // Test
         testView.iconInset = iconInset
@@ -74,7 +66,7 @@ class IconAppearanceTests : XCTestCase {
 
     func test_IconAppearance_good_noIconType() {
         // Setup
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         let icon = testView.icon
@@ -86,7 +78,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_setIconType() {
         // Setup
         let icon = TestIcon.fire
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         testView.icon = icon
@@ -99,7 +91,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_noSelectedIconType() {
         // Setup
         let normalIcon = TestIcon.fire
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         testView.icon = normalIcon
         
         // Test
@@ -113,7 +105,7 @@ class IconAppearanceTests : XCTestCase {
         // Setup
         let normalIcon = TestIcon.fire
         let selectedIcon = TestIcon.rocket
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         testView.icon = normalIcon
         XCTAssertNotNil(testView.icon)
         XCTAssertNil(testView.selectedIcon)
@@ -128,7 +120,7 @@ class IconAppearanceTests : XCTestCase {
 
     func test_IconAppearance_good_noIconColor() {
         // Setup
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         let result = testView.iconColor
@@ -140,7 +132,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_setIconColor() {
         // Setup
         let iconColor = UIColor.purple
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         testView.iconColor = iconColor
@@ -152,7 +144,7 @@ class IconAppearanceTests : XCTestCase {
 
     func test_IconAppearance_good_noIconBackgroundColor() {
         // Setup
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         let defaultBackgroundColor = UIColor.clear
         
         // Test
@@ -165,7 +157,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_setIconBackgroundColor() {
         // Setup
         let iconBackgroundColor = UIColor.yellow
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         testView.iconBackgroundColor = iconBackgroundColor
@@ -177,7 +169,7 @@ class IconAppearanceTests : XCTestCase {
 
     func test_IconAppearance_good_noBorderWidth() {
         // Setup
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         let defaultBorderWidth: CGFloat = 0
         
         // Test
@@ -190,7 +182,7 @@ class IconAppearanceTests : XCTestCase {
     func test_IconAppearance_good_setBorderWidth() {
         // Setup
         let borderWidth: CGFloat = 4.0
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         
         // Test
         testView.iconBorderWidth = borderWidth
@@ -205,7 +197,7 @@ class IconAppearanceTests : XCTestCase {
         // Setup
         let defaultIconBorderColor = UIColor.clear
         let viewBorderColor = UIColor.green.cgColor
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         testView.layer.borderColor = viewBorderColor
         
         // Test
@@ -220,7 +212,7 @@ class IconAppearanceTests : XCTestCase {
         // Setup
         let iconBorderColor = UIColor.red
         let viewBorderColor = UIColor.green.cgColor
-        let testView = UIView(frame: .zero)
+        let testView = UIImageView(frame: .zero)
         testView.layer.borderColor = viewBorderColor
         
         // Test

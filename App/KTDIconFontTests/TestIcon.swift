@@ -5,7 +5,7 @@
 //  Created by Kyle Donnelly on 3/21/20.
 //
 
-import KTDIconFont
+@testable import KTDIconFont
 
 public enum TestIcon: unichar, IconFont {
     case notFound
@@ -21,4 +21,16 @@ public enum TestIcon: unichar, IconFont {
     public static var initialCodePoint: unichar {
         return 0xe9a5
     }
+}
+
+extension UIButton : IconAppearance {
+    public typealias AssociatedIcon = TestIcon
+}
+
+extension UIImageView : IconAppearance {
+    public typealias AssociatedIcon = TestIcon
+}
+
+extension UIBarItem : IconAppearance {
+    public typealias AssociatedIcon = TestIcon
 }
