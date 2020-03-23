@@ -79,6 +79,12 @@ func updateUI(label: UILabel, button: UIButton) {
 }
 ```
 
+## Sample app
+
+Feel free to clone the repo and replace the sample font file in IconViewer with your own font file. Remember to use the script to generate it! Then you can view your icons in a table view.
+
+![Icon Font App Demo](https://cooperative4thecommunity.com/wp-content/uploads/2020/03/IconFontDemo.png)
+
 ## Running unit tests
 
 From the demo project's xcworkspace, go to Manage Schemes and select KTDIconFont-Unit-Tests. Close the Manage Schemes screen, select the unit test target, and Cmd+U to run test cases.
