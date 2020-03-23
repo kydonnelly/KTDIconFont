@@ -52,7 +52,10 @@ Run the script to convert the font file into project code:
 $ python generate_icon_font.py -s ~/Downloads/MyProjectIconFont.zip -t ~/Projects/MyProject/Source/UI/ -f ~/Projects/MyProject/Fonts
 Writing to ~/Projects/MyProject/Source/UI/MyProjectIconFont.swift...
 Done!
-$
+```
+
+In case you forget the options:
+```
 $ python generate_icon_font.py --help
 
 Generate IconFont swift enum from IcoMoon font file.
