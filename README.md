@@ -9,8 +9,11 @@ To see the demo project, clone the repo and run 'pod install' inside KTDIconFont
 ## Prerequisites
 
 Cocoapods ≥ 1.3.0
+
 Python ≥ 2.7.10
+
 Xcode ≥ 9.3.1
+
 iOS ≥ 9.0
 
 ## Installing
