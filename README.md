@@ -86,3 +86,11 @@ From the demo project's xcworkspace, go to Manage Schemes and select KTDIconFont
 ## License
 
 MPL v2, see file.
+
+## Future Enhancements
+
+Add Obj-C support.
+
+Add IBInspectable vars for setting icon from Interface Builder.
+
+Make sure multiple icon fonts can be used in the same project.
