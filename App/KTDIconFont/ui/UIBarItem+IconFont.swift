@@ -27,7 +27,7 @@ public extension IconAppearance where Self: UIBarItem {
     
 }
 
-extension IconAppearance where Self: UITabBarItem {
+public extension IconAppearance where Self: UITabBarItem {
     
     func refreshIconAppearance() {
         if let icon = self.icon, let color = self.iconColor {
