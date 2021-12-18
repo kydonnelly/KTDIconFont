@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AU3-5Y-0Au">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AU3-5Y-0Au">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="IconCell" id="sk3-XP-Kgp" customClass="IconCell" customModule="IconViewer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="IconImageCell" id="sk3-XP-Kgp" customClass="IconImageCell" customModule="IconViewer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sk3-XP-Kgp" id="e4w-5c-dOW">
@@ -57,6 +58,40 @@
                                             <outlet property="iconLabel" destination="X4C-nf-XCF" id="UXa-JJ-Q0x"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="IconButtonCell" id="Pm1-mf-KhI" customClass="IconButtonCell" customModule="IconViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pm1-mf-KhI" id="guS-xf-jda">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPa-31-8eP">
+                                                    <rect key="frame" x="12" y="8" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="E7G-Ff-94h"/>
+                                                        <constraint firstAttribute="height" constant="48" id="IOU-fI-9tB"/>
+                                                    </constraints>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqD-VY-tMh">
+                                                    <rect key="frame" x="68" y="22.5" width="334" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YqD-VY-tMh" secondAttribute="trailing" constant="12" id="1iO-io-2fp"/>
+                                                <constraint firstItem="dPa-31-8eP" firstAttribute="leading" secondItem="guS-xf-jda" secondAttribute="leading" constant="12" id="VCC-lH-0KG"/>
+                                                <constraint firstItem="YqD-VY-tMh" firstAttribute="centerY" secondItem="guS-xf-jda" secondAttribute="centerY" id="ZYb-kJ-9wm"/>
+                                                <constraint firstItem="YqD-VY-tMh" firstAttribute="leading" secondItem="dPa-31-8eP" secondAttribute="trailing" constant="8" id="kTl-u6-Fv7"/>
+                                                <constraint firstItem="dPa-31-8eP" firstAttribute="centerY" secondItem="guS-xf-jda" secondAttribute="centerY" id="mNx-Ix-y0d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconButton" destination="dPa-31-8eP" id="rlt-Kr-BcQ"/>
+                                            <outlet property="iconLabel" destination="YqD-VY-tMh" id="mFw-Vz-FWB"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="AU3-5Y-0Au" id="2nu-s9-NXb"/>
@@ -64,6 +99,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GLF-4H-H5X"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xZL-wO-vcI" secondAttribute="trailing" id="6tt-NW-CdY"/>
@@ -71,7 +107,6 @@
                             <constraint firstItem="xZL-wO-vcI" firstAttribute="top" secondItem="BOb-V3-IlV" secondAttribute="bottom" id="mnf-qn-BUN"/>
                             <constraint firstAttribute="bottom" secondItem="xZL-wO-vcI" secondAttribute="bottom" id="siE-Aa-TrY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GLF-4H-H5X"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="xZL-wO-vcI" id="yRK-yM-1bS"/>

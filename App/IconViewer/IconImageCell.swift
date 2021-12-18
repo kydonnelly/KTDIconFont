@@ -1,5 +1,5 @@
 //
-//  IconCell.swift
+//  IconImageCell.swift
 //  IconViewer
 //
 //  Created by Kyle Donnelly on 3/21/20.
@@ -9,7 +9,7 @@
 import UIKit
 import KTDIconFont
 
-class IconCell: UITableViewCell {
+class IconImageCell: UITableViewCell {
     
     @IBOutlet private var iconLabel: UILabel!
     @IBOutlet private var iconImageView: UIImageView!

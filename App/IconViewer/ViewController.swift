@@ -23,11 +23,19 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int(KTDIcons.allCases.count) - 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Images"
+        case 1: return "Buttons"
+        default: preconditionFailure()
+        }
     }
     
 }
@@ -35,11 +43,18 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: IconCell = self.tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath) as! IconCell
-        
-        cell.setup(icon: KTDIcons.allCases[indexPath.row + 1])
-        
-        return cell
+        switch indexPath.section {
+        case 0:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "IconImageCell", for: indexPath) as! IconImageCell
+            cell.setup(icon: KTDIcons.allCases[indexPath.row + 1])
+            return cell
+        case 1:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "IconButtonCell", for: indexPath) as! IconButtonCell
+            cell.setup(icon: KTDIcons.allCases[indexPath.row + 1])
+            return cell
+        default:
+            preconditionFailure()
+        }
     }
 
 }
