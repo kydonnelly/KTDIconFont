@@ -8,7 +8,7 @@
 
 import KTDIconFont
 
-public enum ${font_name}: unichar, IconFont {
+@objc public enum ${font_name}: unichar, IconFont {
     case notFound = 0x0
     
 ${enum_cases}
