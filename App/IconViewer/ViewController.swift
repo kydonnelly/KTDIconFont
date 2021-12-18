@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +34,7 @@ extension ViewController: UITableViewDataSource {
         switch section {
         case 0: return "Images"
         case 1: return "Buttons"
+        case 2: return "SwiftUI"
         default: preconditionFailure()
         }
     }
@@ -51,6 +52,10 @@ extension ViewController: UITableViewDelegate {
         case 1:
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IconButtonCell", for: indexPath) as! IconButtonCell
             cell.setup(icon: KTDIcons.allCases[indexPath.row + 1])
+            return cell
+        case 2:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "IconHostingCell", for: indexPath) as! IconHostingCell
+            cell.setup(icon: KTDIcons.allCases[indexPath.row + 1], parentController: self)
             return cell
         default:
             preconditionFailure()

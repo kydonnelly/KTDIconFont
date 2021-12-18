@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07C0C2A7A6E005372E4E06DE /* libPods-IconViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFED387C7987239D94BDC8E /* libPods-IconViewer.a */; };
 		2706540D276D91190038C237 /* IconButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706540C276D91180038C237 /* IconButtonCell.swift */; };
+		27065413276D92C90038C237 /* IconSwiftUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27065412276D92C90038C237 /* IconSwiftUICell.swift */; };
 		2710DD6E2424570000365E87 /* KTDIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 2710DD6C2424570000365E87 /* KTDIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2710DD7B242458C400365E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD7A242458C400365E87 /* AppDelegate.swift */; };
 		2710DD7F242458C400365E87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD7E242458C400365E87 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2706540C276D91180038C237 /* IconButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButtonCell.swift; sourceTree = "<group>"; };
+		27065412276D92C90038C237 /* IconSwiftUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSwiftUICell.swift; sourceTree = "<group>"; };
 		2710DD692424570000365E87 /* KTDIconFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTDIconFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2710DD6C2424570000365E87 /* KTDIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTDIconFont.h; sourceTree = "<group>"; };
 		2710DD6D2424570000365E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				2710DD7A242458C400365E87 /* AppDelegate.swift */,
 				2706540C276D91180038C237 /* IconButtonCell.swift */,
 				273BDE6724272940004E88C1 /* IconImageCell.swift */,
+				27065412276D92C90038C237 /* IconSwiftUICell.swift */,
 				273BDE6B24273865004E88C1 /* KTDIcons.swift */,
 				2710DD7E242458C400365E87 /* ViewController.swift */,
 				2710DD80242458C400365E87 /* Main.storyboard */,
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27065413276D92C90038C237 /* IconSwiftUICell.swift in Sources */,
 				273BDE6C24273865004E88C1 /* KTDIcons.swift in Sources */,
 				2710DD7F242458C400365E87 /* ViewController.swift in Sources */,
 				2706540D276D91190038C237 /* IconButtonCell.swift in Sources */,
